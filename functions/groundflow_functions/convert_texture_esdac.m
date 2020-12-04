@@ -3,6 +3,7 @@ function [ FracMineral, FracQuartz, FracOrganicMatter, FracUrban, FracPorosity ]
     % Convert texture to esdac values.
     % Used in van der Veldt, R. (2017). Challenges of modelling soaring flight in humid landscapes
     % Edited by Rens van der Veldt, original by Casper Borgman
+    % Edited by Walter van Dijk 2020
     
     %% [Input]
     
@@ -39,7 +40,7 @@ function [ FracMineral, FracQuartz, FracOrganicMatter, FracUrban, FracPorosity ]
     
     %% Assign class fractions
     % Esdac texture description
-    % -9999 | -128 = Waterbodies
+    % -9999 | -128 = Waterbodies (NaN)
     % 0 = cities & impermeable surface
     % 1= sand >65% clay <18%
     % 2= medium 18-35% clay, >15% sand

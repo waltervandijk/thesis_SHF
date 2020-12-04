@@ -3,6 +3,7 @@ function [ VHC ] = calc_vhc( VHC_Mineral, VHC_Quartz, VHC_OrganicMatter,...
     % Calculates volumetric heat capacity.
     % Used in van der Veldt, R. (2017). Challenges of modelling soaring flight in humid landscapes
     % Edited by Rens van der Veldt, original by Casper Borgman
+    % Edited by Walter van Dijk
     
     %% [Input]
     

@@ -1,20 +1,24 @@
 function [LAIout] = constructLAI(LAIsummary,landusedata,decadenum)
 %% construct LAI map for lgn2018
-% Walter van Dijk
-% 11/2019
+% Uses previously created summary of LAI values per land use category.
+% The used LAI values are derived from Copernicus 300m LAI dataset.
+% 
+% Walter van Dijk 2020
 %
 % meant for lgn2018 classes
 % function works for grid and vector landuse data 
 
-time = decadenum-5;
+time = decadenum-6;
 if time > 24
     time = 24;
     disp('end of LAI data reached')
+    disp('using last available LAI data')
 end
 
 if time < 1
     time = 1;
     disp('data before LAI record')
+    disp('using first available LAI data')
 end
 
 LAIout=double(landusedata);

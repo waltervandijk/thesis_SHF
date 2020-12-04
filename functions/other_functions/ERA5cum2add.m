@@ -1,10 +1,11 @@
 function ERA5Out = ERA5cum2add(ERA5In,ERA5datetime)
 % ERA5 data adjustment
-% Walter van Dijk
-% University of Amsterdam
+% cumulative values to additive values
+%
+% Walter van Dijk 2020
 
 %% Notes
-% All data are daily cumulative values.
+% Some ERA5 data are daily cumulative values.
 % The first one '01-May-2018 00:00:00' is the total for '30-April-2018'
 % To get hourly data the previous value has to be subtracted from the
 % current value. This has to be done for all values exept the one of which
@@ -16,7 +17,9 @@ function ERA5Out = ERA5cum2add(ERA5In,ERA5datetime)
 
 %% Outputs
 % ERA5Out = Output variable with hourly data
-ERA5Out(:,:,:)=zeros(size(ERA5In,1,2,3));
+
+%% calculations
+ERA5Out(:,:,:)=zeros(size(ERA5In));
 steps = size(ERA5In,3);
 
 for i=3:steps

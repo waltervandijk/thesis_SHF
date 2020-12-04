@@ -2,7 +2,7 @@ function [ Rh ] = convert_aero_resistance( lgn2018, aa, bb, cc )
     % Converts lgn2018 map to aerodynamic resistance map.
     % Used in van Dijk, W. (2020)
     % Edited by Rens van der Veldt, original by Casper Borgman
-    % Edit Walter van Dijk
+    % Edit Walter van Dijk 2020: make it aply to the LGN2018 land use map
     
     %% [Input]
     
